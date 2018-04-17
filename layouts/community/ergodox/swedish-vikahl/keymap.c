@@ -21,17 +21,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |        |   Å  |   Ä  |   Ö  |   P  |   Y  |      |           |      |   F  |   G  |   C  |   R  |   L  |   ,    |
  * | Del    |   Q  |   W  |   E  |   R  |   T  |  Up  |           | Down |   Y  |   U  |   I  |   O  |   P  |   Å    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |   A  |   O  |   E  |   U  |   I  |      |           |      |   D  |   H  |   T  |   N  |  S   |   -    |
- * | Esc    |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  Ö   |   Ä    |
+ * |        |   A  |   O  |   E  |   U  |   I  |      |           |      |   H  |   J  |   K  |   L  |  Ö   |   Ä    |
+ * | Esc    |   A  |   S  |   D  |   F  |   G  |------|           |------|   D  |   H  |   T  |   N  |  S   |   -    |
  * |--------+------+------+------+------+------|  Lt1 |           |  Win |------+------+------+------+------+--------|
- * | LShift |   Q  |   J  |   K  |   X  |   B  | MDIA |           |      |   M  |   W  |   V  |   Z  |      |        |
+ * | LShift |   .  |   Q  |   J  |   K  |   X  | SYMB |           |      |   B  |   M  |   W  |   V  |   Z  |        |
  * |        |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   -  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | CTRL | AltGr|  Win | Left | Right|                                       | AltGr| Down |  Up  | Left | Right|
  *   | (.)) | AltGr|      | Left | Right|                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,---------------.       ,---------------.
- *                                        | Alt  |Ctrl/Esc|       | Alt  |Ctrl/Esc|
+ *                                        | Alt  |Ctrl/Esc|       | MO 1 |  MO 2  |
  *                                 ,------|------|--------|       |------+--------+------.
  *                                 |      |      |  Home  |       | PgUp |        |      |
  *                                 | Space|Backsp|--------|       |------|  Tab   |Enter |
@@ -43,9 +43,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         NO_DLR,         KC_1,       KC_2,           KC_3,   KC_4,   KC_5,   KC_LEFT,
         KC_DEL,         KC_Q,       KC_W,           KC_E,   KC_R,   KC_T,   KC_UP,
         KC_ESC,         KC_A,       KC_S,           KC_D,   KC_F,   KC_G,
-        KC_LSFT,        KC_Z,       KC_X,           KC_C,   KC_V,   KC_B,   MO(MDIA),
-        CTL_T(KC_DOT),  KC_RALT,    KC_LWIN,        KC_LEFT,KC_RGHT,
-                                                          KC_LALT, CTL_T(KC_ESC),
+        KC_LSFT,        KC_Z,       KC_X,           KC_C,   KC_V,   KC_B,   MO(SYMB),
+        CTL_T(KC_Z),    KC_RALT,    KC_LWIN,        KC_LEFT,KC_RGHT,
+                                                          MO(SYMB), MO(MDIA),
                                                                          KC_HOME,
                                                         KC_SPC, KC_BSPC, KC_END,
         // right hand
